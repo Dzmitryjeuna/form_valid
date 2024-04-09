@@ -27,7 +27,7 @@ body {
   content: '';
   top: 0;
   left: 0;
-  background: #333333cb url("C:\Users\Белорусочка\Desktop\layout\gris_dior\assets\img\heart.svg") center / 50px no-repeat;
+  background: #333333cb center / 50px no-repeat;
   width: 100%;
   height: 100%;
   opacity: 0;
