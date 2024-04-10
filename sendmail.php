@@ -10,7 +10,7 @@ $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
-$mail->setFrom('С первого сайта с формой');
+$mail->setFrom('shafarenko.di@gmail.com', 'С первого сайта с формой');
 $mail->addAddress('shafarenko.di@gmail.com');
 $mail->Subject = 'Моя первая отправленная форма';
 
@@ -28,7 +28,7 @@ if(trim(!empty($_POST['email']))) {
     $body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
 }
 if(trim(!empty($_POST['hand']))) {
-  $body.='<p><strong>Телефон:</strong> '.$hand.'</p>';
+  $body.='<p><strong>Рука:</strong> '.$hand.'</p>';
 }
 if(trim(!empty($_POST['age']))) {
     $body.='<p><strong>Сообщение:</strong> '.$_POST['age'].'</p>';
@@ -50,9 +50,9 @@ $mail->Body = $body;
 
 
 if (!$mail->send()) {
-    $message = 'Ошибка';
+  $message = 'Ошибка';
 } else {
-    $message = 'Данные отправлены!';
+  $message = 'Данные отправлены!';
 }
 
 $response = ['message' => $message];
